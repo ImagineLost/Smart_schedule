@@ -5,6 +5,7 @@ import AppHeader from './components/AppHeader.vue';
 import TodosDoneCheck from './components/TodosDoneCheck.vue';
 import TodoList from './components/TodoList.vue';
 import AppFooter from './components/AppFooter.vue';
+import { SpeedInsights } from '@vercel/speed-insights/vue';
 
 
 export default {
@@ -17,7 +18,8 @@ export default {
     AppHeader,
     TodosDoneCheck,
     TodoList,
-    AppFooter
+    AppFooter,
+    SpeedInsights
   }
 };
 </script>
@@ -29,6 +31,7 @@ export default {
     <todo-list />
   </body>
   <app-footer />
+  <SpeedInsights />
 
 </template>
 
