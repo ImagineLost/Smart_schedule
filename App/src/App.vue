@@ -1,5 +1,6 @@
 <script>
   
+import { Analytics } from '@vercel/analytics/vue';
 import AppHeader from './components/AppHeader.vue';
 import TodosDoneCheck from './components/TodosDoneCheck.vue';
 import TodoList from './components/TodoList.vue';
@@ -13,6 +14,7 @@ export default {
     }
   },
   components: {
+    Analytics,
     AppHeader,
     TodosDoneCheck,
     TodoList,
@@ -23,6 +25,7 @@ export default {
 </script>
 
 <template>
+  <Analytics />
   <app-header />
   <body class="container">
     <todo-list />
