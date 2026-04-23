@@ -61,7 +61,7 @@ export default {
 <template>
   <div class="todo-list">
     <div class="input-group mb-3">
-      <input type="text" v-model="newTodo" class="form-control" placeholder="Добавьте новую задачу(не длиннее 15 символов)" maxlength="" @keyup.enter="add" />
+      <input type="text" v-model="newTodo" class="form-control" placeholder="Добавьте новую задачу" @keyup.enter="add" />
       <button class="btn btn-outline-secondary" type="button" @click="add">
         Добавить
       </button>
@@ -74,7 +74,7 @@ export default {
         :class="{done: item.isDone}"
       >
         <div class="input-group">
-          <span class="date"> {{ item.createDate }}</span>
+          <span class="date">Задача от {{ item.createDate }}</span>
           <span class="todo-title">
             {{ item.title }}
           </span>

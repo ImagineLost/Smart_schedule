@@ -1,11 +1,10 @@
 <script>
-  
+import { SpeedInsights } from '@vercel/speed-insights/vue';
 import { Analytics } from '@vercel/analytics/vue';
 import AppHeader from './components/AppHeader.vue';
 import TodosDoneCheck from './components/TodosDoneCheck.vue';
 import TodoList from './components/TodoList.vue';
 import AppFooter from './components/AppFooter.vue';
-import { SpeedInsights } from '@vercel/speed-insights/vue';
 
 
 export default {
@@ -14,25 +13,24 @@ export default {
     }
   },
   components: {
-    Analytics,
     AppHeader,
     TodosDoneCheck,
     TodoList,
     AppFooter,
-    SpeedInsights
+    SpeedInsights,
+    Analytics,
   }
 };
 </script>
 
 <template>
-  <Analytics />
+  <speed-insights />
   <app-header />
   <body class="container">
     <todo-list />
   </body>
   <app-footer />
-  <SpeedInsights />
-
+  <analytics />
 </template>
 
 <style>
