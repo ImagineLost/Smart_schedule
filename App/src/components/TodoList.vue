@@ -45,7 +45,7 @@ export default {
       }
       this.todos.push({
         title: this.newTodo,
-        createDate: new Date(),
+        createDate: new Date().toLocaleDateString('ru-RU'),
         note: "",
         isDone: false
       });
@@ -61,7 +61,7 @@ export default {
 <template>
   <div class="todo-list">
     <div class="input-group mb-3">
-      <input type="text" v-model="newTodo" class="form-control" placeholder="Добавьте новую задачу" @keyup.enter="add" />
+      <input type="text" v-model="newTodo" class="form-control" placeholder="Добавьте новую задачу(не длиннее 15 символов)" maxlength="" @keyup.enter="add" />
       <button class="btn btn-outline-secondary" type="button" @click="add">
         Добавить
       </button>
@@ -74,22 +74,22 @@ export default {
         :class="{done: item.isDone}"
       >
         <div class="input-group">
-          <div class="input-group-text">
-            <input
-              v-model="item.isDone"
-              class="form-check-input mt-0"
-              type="checkbox"
-              @click="toggle(item)"
-            />
-            <span class="todo-title" @click="toggle(item)">
+          <span class="date"> {{ item.createDate }}</span>
+          <span class="todo-title">
             {{ item.title }}
           </span>
-          </div>
           <textarea
             v-model="item.note"
-            class=" todo-textarea"
-            placeholder="Добавьте заметку к задаче"
+            class="todo-textarea"
+            placeholder="Добавьте заметку к задаче, её краткое описание или разбейте её на подзадачи"
           ></textarea>
+          <button
+            class="btn btn-outline-primary"
+            type="button"
+            @click="toggle(item)"
+          >
+            Сделано
+          </button>
           <button
             class="btn btn-outline-secondary"
             
@@ -106,6 +106,10 @@ export default {
 </template>
 
 <style>
+.date {
+  font-size: 1rem;
+  color: #888;
+}
 .todo-list {
   margin: 20px;
 }
@@ -113,7 +117,8 @@ export default {
   flex: 1;
 }
 .todo-textarea {
-  min-width: 100px
+  field-sizing: content;
+  max-height: 200px;
 }
 .input-group {
   cursor: pointer;
@@ -124,14 +129,12 @@ export default {
 .todo-grid {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, auto));
   padding: 0;
   margin: 0;
 }
 
 .todo-card {
-  min-height: 120px;
-  max-width: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -139,11 +142,17 @@ export default {
   border-radius: 16px;
   border: 1px solid #ddd;
   background: #fff;
+  min-height: auto;
+  min-width: 350px;
+  width: auto;
+  max-width: 100%;
 }
+
 
 .todo-card .input-group {
   flex-direction: column;
-  gap: 0.75rem;
+  align-items: stretch;
+  gap: 0.6rem;
 }
 
 .todo-card button {
@@ -151,11 +160,13 @@ export default {
 }
 
 .todo-card .todo-title {
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
-
+.todo-title {
+  word-break: break-word;
+}
 .todo-card .todo-slider {
   width: 100%;
 }
