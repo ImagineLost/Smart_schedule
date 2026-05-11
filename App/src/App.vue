@@ -18,7 +18,7 @@ export default {
     TodoList,
     AppFooter,
     SpeedInsights,
-    Analytics,
+    Analytics
   }
 };
 </script>
