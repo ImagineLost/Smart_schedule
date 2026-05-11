@@ -87,8 +87,17 @@ export default {
             class="btn btn-outline-primary"
             type="button"
             @click="toggle(item)"
+            v-if="item.isDone == false"
           >
-            Сделано
+            Сделать
+          </button>
+          <button
+            class="btn btn-secondary"
+            type="button"
+            @click="toggle(item)"
+            v-else
+          >
+            Отменить
           </button>
           <button
             class="btn btn-outline-secondary"
@@ -119,6 +128,7 @@ export default {
 .todo-textarea {
   field-sizing: content;
   max-height: 200px;
+  scrollbar-width: auto;
 }
 .input-group {
   cursor: pointer;
