@@ -8,7 +8,7 @@ export default {
 
 <template>
   <div class="container">
-    <div>
+    <div class="d-flex align-items-center flex-column mb-3">
       <h3>Выполненные задачи</h3>
       <span class="badge bg-success">Всего выполненных задач: {{ totalDone }}</span>
     </div>
