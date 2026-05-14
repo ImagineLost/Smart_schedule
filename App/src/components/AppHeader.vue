@@ -18,9 +18,10 @@ export default {
             <div>
                 <a href="#" class="d-flex align-items-center text-decoration-none">
                     <img src="../assets/img/Logo.png" alt="Logo" class="logo">
-                    <span>Smart Schedule</span>
+                    <span class="text-decoration-none">Smart Schedule</span>
                 </a>
             </div>
+            <div><span class="slogon">Достигни своих целей!</span></div>
         </div>
     </nav>
     </header>  
@@ -36,5 +37,8 @@ export default {
     width: 10%;
     height: 10%;
     margin-right: 5px;
+}
+.slogon {
+    font-weight: 600;
 }
 </style>
