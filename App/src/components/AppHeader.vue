@@ -12,8 +12,8 @@ export default {
 </script>
 
 <template>
-    <header>
-    <nav class="navbar light position-sticky top-0 z-3">
+    <header class="position-sticky top-0 z-3">
+    <nav class="navbar light">
         <div class="container">
             <div>
                 <a href="#" class="d-flex align-items-center text-decoration-none">
