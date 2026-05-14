@@ -30,7 +30,6 @@
 .socicon {
     width: 70px;
     height: 70px;
-    border-radius: 100%;
     display: inline-block;
     margin: 0 15px;
     cursor: pointer;
