@@ -7,20 +7,20 @@
             © 2026 Smart Schedule. Made by Dmitry Sokolov. 
         </div>
         <div class="p-3">
-            contact me: <a href="https://t.me/Imagine_Lost" class="socicon tg">
-                <img src="../assets/img/telegram.png" alt="Telegram" class="contact-icon">
+            contact me: <a href="https://t.me/Imagine_Lost">
+                <img src="../assets/img/telegram.png" alt="Telegram" class="socicon tg">
             </a>
-            <a href="https://vk.com/imaginelost" class="socicon vk">
-                <img src="../assets/img/vk.png" alt="VK" class="contact-icon">
+            <a href="https://vk.com/imaginelost">
+                <img src="../assets/img/vk.png" alt="VK" class="socicon vk">
             </a>
-            <a href="mailto:dimasokolow22@gmail.com" class="socicon email">
-                <img src="../assets/img/email.png" alt="Email" class="contact-icon">
+            <a href="mailto:dimasokolow22@gmail.com">
+                <img src="../assets/img/email.png" alt="Email" class="socicon email">
             </a>
-            <a href="https://github.com/ImagineLost" class="socicon github">
-                <img src="../assets/img/github.png" alt="GitHub" class="contact-icon">
+            <a href="https://github.com/ImagineLost">
+                <img src="../assets/img/github.png" alt="GitHub" class="socicon github">
             </a>
-            <a href="https://www.youtube.com/@ImagineLost_OG" class="socicon yt">
-                <img src="../assets/img/youtube.png" alt="YouTube" class="contact-icon">
+            <a href="https://www.youtube.com/@ImagineLost_OG">
+                <img src="../assets/img/youtube.png" alt="YouTube" class="socicon yt">
             </a>
         </div>
     </footer>
