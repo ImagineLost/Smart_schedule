@@ -18,8 +18,14 @@ export default {
     <div class="text-center" v-if="totalDone <= 10 && totalDone > 0">
       <p class="fw-bold">Отличная работа! Вы уже выполнили {{ totalDone }} задач. Продолжайте в том же духе, и вы достигнете величайших высот</p>
     </div>
-    <div class="text-center" v-if="totalDone > 10">
-      <p class="fw-bold">Вы выполнили {{ totalDone }} задач!!!!! Да вы просто бог мультитакскинга</p>
+    <div class="text-center" v-if="totalDone > 10 && totalDone <= 15">
+      <p class="fw-bold">Вы выполнили {{ totalDone }} задач!!!!! Продолжайте в том же духе и вам не будет равных!</p>
+    </div>
+    <div class="text-center" v-if="totalDone > 15 && totalDone < 20">
+      <p class="fw-bold">Вы выполнили {{ totalDone }} задач! Вы просто невероятны!</p>
+    </div>
+    <div class="text-center" v-if="totalDone >= 20">
+      <p class="fw-bold">Вы выполнили {{ totalDone }} задач! С такой продуктивностью вам нет равных на этой планете! </p>
     </div>
   </div>
 </template>
