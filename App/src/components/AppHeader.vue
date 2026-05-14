@@ -12,15 +12,16 @@ export default {
 </script>
 
 <template>
-    <header>
-    <nav class="navbar light position-sticky top-0 z-3">
+    <header class="position-sticky top-0 z-3">
+    <nav class="navbar light">
         <div class="container">
             <div>
                 <a href="#" class="d-flex align-items-center text-decoration-none">
                     <img src="../assets/img/Logo.png" alt="Logo" class="logo">
-                    <span>Smart Schedule</span>
+                    <span class="text-decoration-none">Smart Schedule</span>
                 </a>
             </div>
+            <div><span class="slogon">Достигни своих целей!</span></div>
         </div>
     </nav>
     </header>  
@@ -36,5 +37,8 @@ export default {
     width: 10%;
     height: 10%;
     margin-right: 5px;
+}
+.slogon {
+    font-weight: 600;
 }
 </style>

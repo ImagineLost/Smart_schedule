@@ -63,7 +63,7 @@ export default {
     <div class="input-group mb-3">
       <input type="text" v-model="newTodo" class="form-control" placeholder="Добавьте новую задачу" @keyup.enter="add" />
       <button class="btn btn-outline-secondary" type="button" @click="add">
-        Добавить
+        Добавить задачу
       </button>
     </div>
 
