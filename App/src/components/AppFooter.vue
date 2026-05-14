@@ -7,7 +7,8 @@
             © 2026 Smart Schedule. Made by Dmitry Sokolov. 
         </div>
         <div class="p-3">
-            contact me: <a href="https://t.me/Imagine_Lost">
+            <p>contact me:</p> 
+            <a href="https://t.me/Imagine_Lost">
                 <img src="../assets/img/telegram.png" alt="Telegram" class="socicon tg">
             </a>
             <a href="https://vk.com/imaginelost">
@@ -48,7 +49,7 @@
 }
 
 .email:hover {
-    background-color: #fff;
+    background-color: #c74a10;
     border: 1px solid #000;
 }
 .github:hover {
